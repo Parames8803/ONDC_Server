@@ -21,10 +21,10 @@ import bcrypt
 import jwt
 import datetime
 
-app = Flask(__name__)
-CORS(app,  origins=["https://ondc-client.onrender.com"])
-
 load_dotenv()
+
+app = Flask(__name__)
+CORS(app, origins=[os.getenv("CLIENT_URL")])
 
 # MongoDB Configuration
 client = MongoClient(os.getenv("MONGO_DB_URL"))
