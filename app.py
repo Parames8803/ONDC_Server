@@ -22,7 +22,7 @@ import jwt
 import datetime
 
 app = Flask(__name__)
-CORS(app)
+CORS(app,  origins=["https://ondc-client.onrender.com"])
 
 load_dotenv()
 
